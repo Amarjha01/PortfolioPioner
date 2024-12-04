@@ -1,0 +1,83 @@
+.CustomeNavbarbgColor{
+    /* background-color: transparent; */
+    background-color: rgba(17, 7, 31, 0.1);
+    backdrop-filter: blur(3px);
+}
+
+.oval{
+    height: 250px;
+    width: 125px;
+    background-color: #763CAC;
+    border-radius: 85px / 125px;
+    
+}
+
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  .Resume::after , .Resume::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 24px;
+    z-index: -10;
+    padding: 30px 58px 30px 58px; 
+    background-image: conic-gradient(from var(--angle), #FF5733, #FFC300, #DAF7A6, #900C3F , #FF5733);
+    animation: 1s spin linear infinite;
+    }
+  .Resume::before{
+    filter: blur(0.5rem);
+    opacity: 0.8;
+  }
+  @keyframes spin{
+    from{
+      --angle: 0deg;
+    }
+    to{
+      --angle: 360deg;
+    }
+  }
+.custome-downloadBtn{
+  padding: 8px 4px 8px 4px;
+  border: 1px solid white;
+  position: relative;
+ border-radius: 0.6rem;
+ background-color: black;
+}
+
+/* .custome-downloadBtn::after , .custome-downloadBtn::before{
+content: '';
+z-index: -1;
+position: absolute;
+width: 100%;
+height: 100%;
+
+border-radius: 0.6rem;
+background-image: conic-gradient(from var(--newAngle), #FF5733, #FFC300, #DAF7A6, #900C3F , #FF5733);
+padding: 10px 6px 10px 6px;
+animation: 1s spin2 linear infinite;
+}
+
+.custome-downloadBtn::before{
+  filter: blur(0.5rem);
+  opacity: 0.6;
+}
+
+@keyframes spin2{
+  from {
+    --newAngle: 0deg
+  } to {
+    --newAngle: 360deg;
+  }
+}
+
+@property --newAngle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+} */
