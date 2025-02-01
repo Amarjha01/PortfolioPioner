@@ -9,7 +9,7 @@ import './CustomePage.css'
 const Home = () => {
   return (
    
-<div  className="backgroundImg h-fit">
+<div  className="backgroundImg h-fit ">
   
 <HeroSection />
 <Experience />

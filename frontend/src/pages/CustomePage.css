@@ -5,7 +5,8 @@
 .backgroundImg {
     background-image: url('../assets/LooperGroup2.png');
     background-size: cover; /* Ensures the image covers the entire div */
-   
+
+    
     background-repeat: no-repeat; /* Prevents tiling */
     height: full; /* Full viewport height */
     width: 100%; /* Full width */

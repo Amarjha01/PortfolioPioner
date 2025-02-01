@@ -41,9 +41,9 @@ const HeroSection = () => {
       </div>
 
 
-      <div className="flex justify-center py-4">
-    <div className="w-28 h-14 flex justify-center relative items-center rounded-3xl bg-black text-white text-center cursor-pointer Resume ">
-     <button className=''onClick={handleResume}> 
+      <div className="flex justify-center py-4 ">
+    <div className="w-28 h-14 flex justify-center relative items-center rounded-3xl bg-black text-white text-center cursor-pointer  Resume ">
+     <button className=''onClick={handleResume} > 
       Resume 
       </button>
      
