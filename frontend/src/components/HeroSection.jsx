@@ -1,9 +1,51 @@
-import React ,{useState} from 'react'
+import React ,{useRef, useState} from 'react'
 import MyImg from '../assets/MyImg.svg'
 import popcornGif from '../assets/popcorn.gif'
-import { p } from 'maath/dist/misc-19a3ec46.esm';
+import SplitType from "split-type";
+
+// import { p } from 'maath/dist/misc-19a3ec46.esm';
+import gsap from "gsap";
+import { useGSAP } from '@gsap/react';
+
 import { IoClose } from "react-icons/io5";
+
+
 const HeroSection = () => {
+
+  const textRef1 = useRef();
+  const textRef2 = useRef();
+
+  useGSAP(()=>{
+    const text = new SplitType(textRef2.current, { type: "words" }); 
+    const t1 = gsap.timeline()
+
+    t1.from(textRef1.current,{
+      // scale:-1,
+         opacity:0,
+         y:100,
+         duration:1,
+         delay:0.1,
+      
+    })
+    t1.from(text.words, {
+      opacity: 0,
+      y: 20,
+      stagger: 0.2, // Words appear one by one
+      duration: 0.8,
+      ease: "power2.out",
+    });
+  })
+
+// useGSAP(()=>{
+//   gsap.from(testRef.current,{
+//     opacity:0,
+//     y:200,
+//     duration:1,
+//     delay:0.1,
+//    scale:-5
+//   })
+// })
+
   const [showResume , setShowResume] = useState(false);
 
   const handleResume = ()=>{
@@ -17,17 +59,17 @@ const HeroSection = () => {
     <div className=' '>
       
       <div className='h-[200px] flex justify-center items-center py-4'>
-        <img src={MyImg} alt="" className='h-full w-auto' />
+        <img src={MyImg} alt="" className='h-full w-auto hover:scale-110 ' />
         </div>
-      <div className='animate-bounce text-white font-bold text-7xl py-4 text-center '>Amar Jha!</div>
-      <div className="flex justify-center">
-          <p className="text-2xl font-medium tracking-tighter  text-gray-300 max-w-[600px]">
+      <div className='animate-bounce text-white cormorant-garamond-bold  text-7xl py-4 text-center ' >Amar Jha!</div>
+      <div className="flex justify-center" >
+          <p className="text-2xl font-medium tracking-tighter  text-gray-300 max-w-[600px]" ref={textRef1} >
             I do Code &{" "}
             <span className="text-transparent font-semibold  bg-clip-text bg-gradient-to-r from-purple-500 to-orange-400">
               Chill
             </span>
           </p>
-          <img
+          <img className='popimg'
             src={popcornGif}
             height={50}
             width={50}
@@ -35,7 +77,7 @@ const HeroSection = () => {
           />
         </div>
       <div className='flex justify-center py-4'>
-        <p className='  text-lg w-11/12 lg:w-2/4 text-white text-center'>
+        <p ref={textRef2} className='  text-lg w-11/12 lg:w-2/4  poppins-light  text-white text-center'>
         Passionate Software Engineer with a focus on React Native development, dedicated to crafting elegant and user-friendly mobile applications.
         </p>
       </div>

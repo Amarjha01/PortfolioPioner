@@ -11,7 +11,7 @@ const Footer = () => {
         <a href="mailto:amarjha880@gmail.com"><SiGmail className=" text-3xl" /></a>
         {/* <a href="mailto:example@example.com?subject=Job%20Application&body=Hello,%0D%0A%0D%0AI%20am%20interested%20in%20applying%20for%20the%20position.%0D%0A%0D%0AThank%20you!&cc=cc@example.com&bcc=bcc@example.com"><SiGmail className=" text-3xl" /></a> */}
         <a href="https://twitter.com/amarjha01"><FaXTwitter className=" text-3xl" /></a>
-        <a href="https://www.instagram.com/amarjha01/"><FaInstagram className="text-3xl" /></a>
+        <a href="https://www.instagram.com/amarjha.tech/"><FaInstagram className="text-3xl" /></a>
         <a href="https://discord.gg/2NCPy5uh"><FaDiscord className=" text-3xl" /></a>
       </div>
     </div>
