@@ -61,7 +61,7 @@ const HeroSection = () => {
       <div className='h-[200px] flex justify-center items-center py-4'>
         <img src={MyImg} alt="" className='h-full w-auto hover:scale-110 ' />
         </div>
-      <div className='animate-bounce text-white cormorant-garamond-bold  text-7xl py-4 text-center ' >Amar Jha!</div>
+      <div className='animate-bounce text-white   text-7xl py-4 text-center ' >Amar Jha!</div>
       <div className="flex justify-center" >
           <p className="text-2xl font-medium tracking-tighter  text-gray-300 max-w-[600px]" ref={textRef1} >
             I do Code &{" "}
