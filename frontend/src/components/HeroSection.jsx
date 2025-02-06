@@ -77,7 +77,7 @@ const HeroSection = () => {
           />
         </div>
       <div className='flex justify-center py-4'>
-        <p ref={textRef2} className='  text-lg w-11/12 lg:w-2/4  poppins-light  text-white text-center'>
+        <p ref={textRef2} className='  text-lg w-11/12 lg:w-2/4    text-white text-center'>
         Passionate Software Engineer with a focus on React Native development, dedicated to crafting elegant and user-friendly mobile applications.
         </p>
       </div>
