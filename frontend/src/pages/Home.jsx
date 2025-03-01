@@ -6,11 +6,12 @@ import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Footer from '@/components/Footer';
 import './CustomePage.css'
+import Nav from '../components/Nav.jsx'
 const Home = () => {
   return (
    
 <div  className="backgroundImg h-fit ">
-  
+<Nav />
 <HeroSection />
 <Experience />
 <Skills />

@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
   line-height: 1.5;
   font-weight: 400;
   color-scheme: #11071F;
@@ -91,7 +91,6 @@
     @apply bg-background text-foreground;
   }
 }
-/* body {
-  font-family: 'Inter', 'Poppins', 'Cormorant Garamond', sans-serif;
-} */
+
+
 

@@ -4,3 +4,38 @@
   padding: 2rem;
   text-align: center;
 } */
+
+
+.gruppo-regular {
+  font-family: "Gruppo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.gruppo-900 {
+  font-family: "Gruppo", sans-serif;
+  font-weight: 900;
+  font-style:normal;
+}
+.gruppo-700 {
+  font-family: "Gruppo", sans-serif;
+  font-weight: 700;
+  font-style:normal;
+}
+
+
+.catamaran-400 {
+  font-family: "Catamaran", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.anta-regular {
+  font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.anta-800 {
+  font-family: "Anta", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}

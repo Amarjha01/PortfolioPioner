@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import StarsCanvas from "../components/StarBackground.jsx";
-import Navbar from "../components/NavBar";
 // import "./globals.css"; // Global CSS file
 
 const GlobalLayout = ({ children }) => {
@@ -9,7 +8,7 @@ const GlobalLayout = ({ children }) => {
    
       <>
       <StarsCanvas />
-      <Navbar />
+     
       <main>{children}</main>
       </>
     
