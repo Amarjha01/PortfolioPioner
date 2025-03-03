@@ -7,15 +7,21 @@ import Projects from '@/components/Projects';
 import Footer from '@/components/Footer';
 import './CustomePage.css'
 import Nav from '../components/Nav.jsx'
+import About from '@/components/About';
+import bgimg from './LooperGroup2.png'
+import Resume from '@/components/Resume';
 const Home = () => {
   return (
    
 <div  className="backgroundImg h-fit ">
+<img src={bgimg} alt="" className='hidden lg:block absolute -z-20   lg:h-[400vh] -right-[20%]'/>
 <Nav />
 <HeroSection />
+<About />
 <Experience />
 <Skills />
 <Projects />
+<Resume />
 <Footer />
 </div>
     

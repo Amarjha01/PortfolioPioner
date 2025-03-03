@@ -25,7 +25,7 @@ const Navbar = () => {
     tl.current.fromTo(
       linksRef.current, // Target all <a> elements
       { x: 50, opacity: 0 }, // Start off-screen to the left
-      { x: 15, opacity: 1, duration: 0.3, stagger: 0.2, 
+      { x: 15, opacity: 1, duration: 0.3, stagger: 0.1, 
         // onComplete: () => {
         //     linksRef.current.forEach(link => {
         //       link.style.textDecorationLine = "underline"; 
@@ -44,24 +44,37 @@ const Navbar = () => {
     }
   }, [isOpen]); // Runs whenever isOpen changes
 
+  const handleSmoothScroll = (e, targetId) => {
+    e.preventDefault();
+    const target = document.querySelector(targetId);
+    
+    if (target) {
+      const offset = 100; // Offset 100px above the section
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+
+      window.scrollTo({ top: targetPosition, behavior: "smooth" });
+      setIsOpen(false); // Close menu on mobile after clicking
+    }
+  };
   return (
-    <div className="h-16 w-full md:sticky fixed  backdrop-blur-xl  top-0 z-40 gruppo-regular  ">
-      <nav className=" text-white  p-4 shadow-md fixed w-full h-16  flex justify-center font-extrabold">
+    <div  className="h-16 w-full md:sticky fixed  backdrop-blur-xl  top-0 z-50 gruppo-regular scroll-smooth ">
+      <nav  className=" text-white  p-4 shadow-md fixed w-full h-16  flex justify-center font-extrabold">
         <div className="max-w-auto w-[95%] h-full mx-auto px-3 flex justify-end md:justify-center items-center">
           {/* Logo */}
        
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex gap-6  text-[#FFF2AF]   text-xl items-center uppercase">
-          <a className="hover:text-zinc-200" href="#About">About</a>
-          <a className="hover:text-zinc-200" href="#Stats">Stats</a>
-          <a className="hover:text-zinc-200" href="#Experience">Experience</a>
+          <div className="hidden md:flex gap-6  text-[#fff2af]   text-xl items-center uppercase">
+          <a className="hover:text-zinc-200" href="#Home" onClick={(e) => handleSmoothScroll(e, "#Home")}>Home</a>
+          <a className="hover:text-zinc-200" href="#About" onClick={(e) => handleSmoothScroll(e, "#About")}>About</a>
+          {/* <a className="hover:text-zinc-200" href="#Stats" onClick={(e) => handleSmoothScroll(e, "#Stats")}>Stats</a> */}
+          <a className="hover:text-zinc-200" href="#Experience" onClick={(e) => handleSmoothScroll(e, "#Experience")}>Experience</a>
           <a href="#" className=" flex items-center  ">
             <img src={Logo} alt="" className=" w-8 "  />
           </a>
-          <a className="hover:text-zinc-200" href="#Tech">Tech</a>
-          <a className="hover:text-zinc-200" href="#Projects">Projects</a>
-          <a className="hover:text-zinc-200" href="#Contct">Contact</a>
+          <a className="hover:text-zinc-200" href="#Tech" onClick={(e) => handleSmoothScroll(e, "#Tech")}>Tech</a>
+          <a className="hover:text-zinc-200" href="#Projects" onClick={(e) => handleSmoothScroll(e, "#Projects")}>Projects</a>
+          <a className="hover:text-zinc-200" href="#Contct" onClick={(e) => handleSmoothScroll(e, "#Contact")}>Contact</a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -79,14 +92,15 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <div
   ref={menuRef}
-  className="md:hidden absolute top-16 right-0 w-5/12 sm:w-4/12  h-auto bg-[#E2DFD0] text-start flex flex-col text-purple-950 uppercase rounded-lg"
+  className="md:hidden absolute top-16 right-0 w-5/12 sm:w-4/12  h-auto bg-[#E2DFD0] text-start flex flex-col  text-purple-950 uppercase rounded-lg"
 >
-  <a ref={(el) => (linksRef.current[0] = el)} href="#About" className="block p-2 text-lg sm:text-base xs:text-sm hover:text-[#a9691b]">About</a>
-  <a ref={(el) => (linksRef.current[1] = el)} href="#Stats" className="block p-2 text-lg sm:text-base xs:text-sm hover:text-[#a9691b]">Stats</a>
-  <a ref={(el) => (linksRef.current[2] = el)} href="#Experience" className="block p-2 text-lg sm:text-base xs:text-sm hover:text-[#a9691b]">Experience</a>
-  <a ref={(el) => (linksRef.current[3] = el)} href="#Tech" className="block p-2 text-lg sm:text-base xs:text-sm hover:text-[#a9691b]">Tech</a>
-  <a ref={(el) => (linksRef.current[4] = el)} href="#Projects" className="block p-2 text-lg sm:text-base xs:text-sm hover:text-[#a9691b]">Projects</a>
-  <a ref={(el) => (linksRef.current[5] = el)} href="#Contact" className="block p-2 text-lg sm:text-base xs:text-sm hover:text-[#a9691b]">Contact</a>
+<a ref={(el) => (linksRef.current[1] = el)} href="#Home" className="block p-2 text-lg sm:text-base xs:text-sm hover:text-[#a9691b]" onClick={(e) => handleSmoothScroll(e, "#Home")}>Home</a>
+  <a ref={(el) => (linksRef.current[0] = el)} href="#About" className="block p-2 text-lg sm:text-base xs:text-sm hover:text-[#a9691b]" onClick={(e) => handleSmoothScroll(e, "#About")}>About</a>
+  {/* <a ref={(el) => (linksRef.current[1] = el)} href="#Stats" className="block p-2 text-lg sm:text-base xs:text-sm hover:text-[#a9691b]" onClick={(e) => handleSmoothScroll(e, "#Stats")}>Stats</a> */}
+  <a ref={(el) => (linksRef.current[2] = el)} href="#Experience" className="block p-2 text-lg sm:text-base xs:text-sm hover:text-[#a9691b]" onClick={(e) => handleSmoothScroll(e, "#Experience")}>Experience</a>
+  <a ref={(el) => (linksRef.current[3] = el)} href="#Tech" className="block p-2 text-lg sm:text-base xs:text-sm hover:text-[#a9691b]" onClick={(e) => handleSmoothScroll(e, "#Tech")}>Tech</a>
+  <a ref={(el) => (linksRef.current[4] = el)} href="#Projects" className="block p-2 text-lg sm:text-base xs:text-sm hover:text-[#a9691b]" onClick={(e) => handleSmoothScroll(e, "#Projects")}> Projects</a>
+  <a ref={(el) => (linksRef.current[5] = el)} href="#Contact" className="block p-2 text-lg sm:text-base xs:text-sm hover:text-[#a9691b]" onClick={(e) => handleSmoothScroll(e, "#Contact")}>Contact</a>
 </div>
 
       </nav>

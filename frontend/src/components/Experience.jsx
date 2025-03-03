@@ -13,7 +13,7 @@ const Experience = () => {
   ];
 
   return (
-    <div className='flex justify-center items-center py-14 w-100vw'>
+    <div id='Experience' className='flex justify-center items-center py-14 w-100vw'>
       <div className='oval absolute blur-3xl'></div>
       <div className='h-auto grid grid-cols-2 grid-rows-2 gap-3 z-20 w-11/12 lg:w-3/5'>
 
