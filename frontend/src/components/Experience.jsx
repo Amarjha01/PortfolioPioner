@@ -6,10 +6,10 @@ import TataMotors_logo from '../assets/TataMotors_logo.png'
 const Experience = () => {
 
   const experienceData = [
-    { img: 'https://febtech.in/logo.png', companyName: "FebTech IT Solutions Pvt. Ltd.", role: "Full Stack Developer Intern", certificateLink: "" },
-    { img: GSsOC_logo, companyName: "GirlScript Foundation", role: "OpenSource Contributor", certificateLink: "https://rb.gy/r5ak67" },
-    { img: AL_logo, companyName: "Ashok Leyland", role: "Associate Trainee", certificateLink: "" },
-    { img: TataMotors_logo, companyName: "Tata Motors", role: "Trainee", certificateLink: "https://rb.gy/t7azag" },
+    { img: 'https://febtech.in/logo.png', companyName: "FebTech IT Solutions Pvt. Ltd.", role: "Full Stack Developer Intern", certificateLink: "/febtech_offerlater.jpg" },
+    { img: GSsOC_logo, companyName: "GirlScript Foundation", role: "OpenSource Contributor", certificateLink: "https://rb.gy/t7azag" },
+    { img: AL_logo, companyName: "Ashok Leyland", role: "Associate Trainee", certificateLink: "/ashol_layland_offer_later.jpg" },
+    { img: TataMotors_logo, companyName: "Tata Motors", role: "Trainee", certificateLink: "https://rb.gy/r5ak67" },
   ];
 
   return (

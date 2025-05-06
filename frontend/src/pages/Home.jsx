@@ -13,7 +13,7 @@ import Resume from '@/components/Resume';
 const Home = () => {
   return (
    
-<div  className="backgroundImg h-fit ">
+<div  className="backgroundImg  ">
 <img src={bgimg} alt="" className='hidden lg:block absolute -z-20   lg:h-[400vh] -right-[20%]'/>
 <Nav />
 <HeroSection />
