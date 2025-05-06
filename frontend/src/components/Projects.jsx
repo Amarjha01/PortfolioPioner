@@ -7,12 +7,13 @@ import WonderWhizCollege from '../assets/WonderWhizCollege(project).png';
 import nifaOverseas from '../assets/project/nifaOverseas.png';
 import viewOnGithub from '../assets/viewongithub.svg'
 import udemyGo from '../assets/project/udemyGo.png'
+import radical_unlearning from '../assets/project/radical_unlearning.png'
 // import viewOnGithub from '../assets/cloudinary/viewongithub.svg'
 const Projects = () => {
 
 const ProjectData = [
 
-    {img:udemyGo, projectTitle:"UdemyGo", description:"is an education platform website that showcases university-accredited online degree and diploma programs, offering easy navigation, EMI options, and mentorship support for learners.", techUsed:["react.js","tailwind CSS","vercel"], liveLink:'https://udemygo.com/' , githubView:'https://github.com/Amarjha01/udemygo'},
+    {img:radical_unlearning, projectTitle:"Radical Unlearning", description:"is an educational platform designed to support unschooling parents, homeschoolers, and self-directed learners. It offers access to a network of trained coaches, learning resources, and community collaboration tools, all centered around a unique framework that promotes open, enjoyable, and effective learning.", techUsed:["react.js","tailwind CSS","gsap", 'node.js' , 'express.js' ,  'redux toolkit', 'mongoDb','digitalOcean', 'nginx' , 'stripe'], liveLink:'https://dev.radical-unlearning.com/' , githubView:'https://github.com/Amarjha01/radicalunlearning'},
     
     {img:udemyGo, projectTitle:"UdemyGo", description:"is an education platform website that showcases university-accredited online degree and diploma programs, offering easy navigation, EMI options, and mentorship support for learners.", techUsed:["react.js","tailwind CSS","vercel"], liveLink:'https://udemygo.com/' , githubView:'https://github.com/Amarjha01/udemygo'},
 
@@ -35,7 +36,9 @@ const ProjectData = [
   <div key={index} className='relative flex flex-col justify-between h-full lg:min-w-96 min-w-80 rounded-lg border border-purple-400'>
   {/* Image */}
   <div className='min-w-full bg-[#774cb045] rounded-lg p-2'>
+    <a href={project.liveLink} target='_blank'>
     <img src={project.img} alt={project.projectTitle} className='h-full w-full p-1 rounded-xl hover:transition-transform cursor-pointer opacity-90' />
+    </a>
   </div>
 
   {/* Text & tech used */}
