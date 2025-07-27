@@ -8,9 +8,9 @@ const Footer = () => {
       <div className="flex justify-center gap-4">
         <a href="https://github.com/Amarjha01/"><FaGithub className=" text-3xl" /></a>
         <a href="https://www.linkedin.com/in/amarjha01/"><FaLinkedin className=" text-3xl" /></a>
-        <a href="mailto:amarjha880@gmail.com"><SiGmail className=" text-3xl" /></a>
+        <a href="mailto:contact@amarjha.dev"><SiGmail className=" text-3xl" /></a>
         <a href="https://twitter.com/amarjha01"><FaXTwitter className=" text-3xl" /></a>
-        <a href="https://www.instagram.com/amarjha.tech/"><FaInstagram className="text-3xl" /></a>
+        <a href="https://www.instagram.com/amarjha.dev/"><FaInstagram className="text-3xl" /></a>
         <a href="https://discord.gg/2NCPy5uh"><FaDiscord className=" text-3xl" /></a>
       </div>
       <p className="text-center text-md text-gray-500 pb-5">© 2024 Amar Jha · All rights reserved</p>

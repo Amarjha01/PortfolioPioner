@@ -57,9 +57,9 @@ const Navbar = () => {
     }
   };
   return (
-    <div  className="h-16 w-full md:sticky fixed  backdrop-blur-xl  top-0 z-50 gruppo-regular scroll-smooth ">
-      <nav  className=" text-white  p-4 shadow-md fixed w-full h-16  flex justify-center font-extrabold">
-        <div className="max-w-auto w-[95%] h-full mx-auto px-3 flex justify-end md:justify-center items-center">
+    <div  className="h-20 w-full flex justify-center items-center rounded-full md:sticky fixed   top-0 z-50 gruppo-regular scroll-smooth translate-y-3 ">
+      <nav  className=" text-white backdrop-blur-xl bg-white/10  fixed w-[90%] lg:w-[75%] h-[60px]  flex justify-center items-center font-extrabold rounded-full">
+        <div className="max-w-auto w-[95%] lg:w-[98%] h-[80%] mx-auto pr-2 flex justify-end md:justify-center items-center bg-[#1c0b34]/60    rounded-full">
           {/* Logo */}
        
 
